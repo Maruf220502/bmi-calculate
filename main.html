@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khan</title>
+     <!-- tailwind link -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ 
+</head>
+<body class="bg-cyan-300">
+    <section>
+        
+        <div class="hero min-h-screen flex justify-center items-center" id="form">
+        <div class="hero-content ">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <h1 class="text-xl font-medium">Your BMI : <span id="bmi-id" class="text-rose-500"></span></h1>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Weight</label>
+                    <input type="text" id="weight" class="input" placeholder="Enter Your Weight" />
+                    <label class="fieldset-label">Height</label>
+                    <input type="text" id="height" class="input" placeholder="Your Height" />
+                    <button id="submit" class="btn btn-neutral mt-4">Submit</button>
+                  </fieldset>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/bmi.js"></script>
+</body>
+</html>
