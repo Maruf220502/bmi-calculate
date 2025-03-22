@@ -13,20 +13,81 @@ document.getElementById("submit")
         return;
     }
 
-    document.getElementById("bmi-id").innerText = bmi.toFixed(2);
+    
     if (bmi < 18.5) {
-       alert("Underweight")
-    } else if (bmi >= 18.5 && bmi < 24.9) {
-        alert("Normal weight")
-    } else if (bmi >= 25 && bmi < 29.9) {
-        alert("Overweight")
-    } else if (bmi >= 30 && bmi < 34.9) {
-        alert("Motu")
-    } else if (bmi >= 35 && bmi < 39.9) {
-        alert("Your category is Elephent")
-    } else {
-        alert("carry on")
+       
+       const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>You are Underweight</p>
+
+            `
+            container.appendChild(div);
+
+    } 
+    else if (bmi >= 18.5 && bmi < 24.9) {
+        
+        const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>You weight is Normal </p>
+            `
+            container.appendChild(div);
+    } 
+    else if (bmi >= 25 && bmi < 29.9) {
+        
+        const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>You are Overweight</p>
+            `
+            container.appendChild(div);
+    } 
+    else if (bmi >= 30 && bmi < 34.9) {
+        
+        const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>You are Motu</p>
+            `
+            container.appendChild(div);
+
+    } 
+    else if (bmi >= 35 && bmi < 39.9) {
+        
+        const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>Your category is Elephent</p>
+            `
+            container.appendChild(div);
+    } 
+    else {
+        const container = document.getElementById("bmi-containner");
+            const div = document.createElement("div")
+            div.innerHTML =`
+            
+            <h1 class="text-xl font-medium">Your BMI : ${bmi.toFixed(2)}</h1>
+            <p>Carry ON</p>
+            `
+            container.appendChild(div);
     }
+   
+})
+document.getElementById("reload").addEventListener("click", function(event){
+    event.preventDefault()
+
     document.getElementById("weight").value = "";
     document.getElementById("height").value = "";
+    document.getElementById("bmi-containner").innerHTML = "";
 })

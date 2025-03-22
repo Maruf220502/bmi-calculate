@@ -9,26 +9,62 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  
 </head>
-<body class="bg-cyan-300">
-    <section>
-        
+<body  class="max-w-md min-h-screen mx-auto bg-slate-600">
+  <header>
+    <nav class="flex justify-between px-11 py-10">
+      <div>
+        <h1 class="text-xl text-orange-600 font-bold"><i>KHAN</i></h1>
+      </div>
+      <button id="convert" class="btn py-2 px-3 bg-orange-200 text-black">convert</button>
+    </nav>
+  </header>
+    <section class="flex "> 
         <div class="hero min-h-screen flex justify-center items-center" id="form">
         <div class="hero-content ">
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
-                  <h1 class="text-xl font-medium">Your BMI : <span id="bmi-id" class="text-rose-500"></span></h1>
                   <fieldset class="fieldset">
-                    <label class="fieldset-label">Weight</label>
+                    <label class="fieldset-label">Weight (kg)</label>
                     <input type="text" id="weight" class="input" placeholder="Enter Your Weight" />
-                    <label class="fieldset-label">Height</label>
+                    <label class="fieldset-label">Height (m)</label>
                     <input type="text" id="height" class="input" placeholder="Your Height" />
                     <button id="submit" class="btn btn-neutral mt-4">Submit</button>
+                    <button id="reload" class="btn mt-4">Reload</button>
+                  </fieldset>
+                  <div id="bmi-containner">
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <!-- convert part -->
+       
+      <div id="convert-calculator" class="hero min-h-screen flex justify-center items-center">
+        <div class="hero-content ">
+          
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <h1 class="text-2xl font-bold text-center">Convert Your Height</h1>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Height (FT)</label>
+                    <input type="text" id="height-ft" class="input" placeholder="Enter Feet" />
+                    <button id="submit-convert" class="btn btn-neutral mt-4">Submit</button>
+                    <label class="fieldset-label">Height (M)</label>
+                    <input type="text" id="height-m" class="input" placeholder="Your Height" />
+                    
+                    <button id="reload-convert" class="btn mt-4">Reload</button>
                   </fieldset>
                 </div>
               </div>
         </div>
       </div>
     </section>
+    
+
+      
     <script src="scripts/bmi.js"></script>
+    <script src="scripts/convert.js"></script>
 </body>
 </html>
